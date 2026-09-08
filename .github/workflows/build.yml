@@ -1,5 +1,5 @@
-name: Build APK
-on: [push]
+name: Compilar APK
+on: gradle clean assembleDebug --no-build-cache 
 jobs:
   build:
     runs-on: ubuntu-latest
