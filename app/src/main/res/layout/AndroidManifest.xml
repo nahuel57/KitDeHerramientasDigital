@@ -22,4 +22,3 @@
           <activity android:name=".LectorWord" />
           <activity android:name=".LectorPowerpoint" />
     </application>
-</manifest>
