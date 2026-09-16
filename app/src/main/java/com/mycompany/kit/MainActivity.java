@@ -1,4 +1,4 @@
-package herramienta.KitDeHerramientasDigital;
+package com.mycompany.kit;
 
 import android.app.Activity;
 import android.os.Bundle;

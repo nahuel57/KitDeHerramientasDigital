@@ -1,4 +1,4 @@
-package herramienta.KitDeHerramientasDigital;
+package com.mycompany.kit;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-public class LectorPowrpoint extends Activity {
+public class LectorPowerpoint extends Activity {
 
     EditText editTexto;
     File archivoPPT;

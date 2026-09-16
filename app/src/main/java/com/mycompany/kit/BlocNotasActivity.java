@@ -1,3 +1,23 @@
+package com.mycompany.kit;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Button;
+import android.widget.Toast;
+import android.view.View;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BlocNotasActivity extends Activity {
+
+    EditText editTexto;
+    File archivoNota;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bloc_notas);
@@ -6,9 +26,8 @@
         Button btnGuardar = findViewById(R.id.btnGuardar);
 
         String nombreArchivo = getIntent().getStringExtra("nombreArchivo");
-if (nombreArchivo == null) nombreArchivo = "nota.txt"; // por si se abre directo, sin pasar por Carpeta
-archivoNota = new File(getFilesDir(), nombreArchivo);
-
+        if (nombreArchivo == null) nombreArchivo = "nota.txt";
+        archivoNota = new File(getFilesDir(), nombreArchivo);
 
         cargarNota();
 
