@@ -1,17 +1,31 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
+plugins {
+    id 'com.android.application'
+    // id 'kotlin-android' (si usás Kotlin)
+}
+android {
+    namespace 'com.mycompany.kit' 
+    compileSdk 33              
+    defaultConfig {
+        applicationId "com.mycompany.kit"
+        minSdk 21
+        targetSdk 26
+        versionCode 1
+        versionName "1.0"
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.6'
-        implementation 'com.github.centic9:poi-on-android:4.1.2'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-} 
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.github.centic9:poi-on-android:4.1.2'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+}

@@ -7,7 +7,7 @@ repositories {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     buildToolsVersion "28.0.3"
 
     compileOptions {
@@ -17,7 +17,7 @@ android {
 
     defaultConfig {
         applicationId "com.mycompany.kit"
-        minSdkVersion 26
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
